@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Consultor de Zoológico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Consultor de Zoológico</h1>
+    <form method="post" action="resultado.php">
+        <label for="animal">Escolha o animal:</label>
+        <select name="animal" id="animal">
+            <option value="leao">Leão</option>
+            <option value="pinguim">Pinguim</option>
+            <option value="macaco">Macaco</option>
+        </select>
+        <input type="submit" value="Verificar Recinto">
+    </form>
+</body>
+</html>

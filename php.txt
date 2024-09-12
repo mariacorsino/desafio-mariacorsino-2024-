@@ -1,0 +1,38 @@
+<?php
+// Array associativo com as preferências de cada animal
+$animais = [
+    "leao" => [
+        "clima" => "árido",
+        "tamanho" => "grande",
+        "terreno" => "terrestre",
+        "companhia" => "nenhuma"
+    ],
+    "pinguim" => [
+        "clima" => "temperado",
+        "tamanho" => "médio",
+        "terreno" => "aquático",
+        "companhia" => "própria espécie"
+    ],
+    "macaco" => [
+        "clima" => "tropical",
+        "tamanho" => "médio",
+        "terreno" => "arbóreo",
+        "companhia" => "própria espécie"
+    ]
+];
+
+// Recebe o animal escolhido pelo usuário
+$animalEscolhido = $_POST['animal'];
+
+// Busca as preferências do animal no array
+$preferencias = $animais[$animalEscolhido];
+
+// Monta a mensagem com a sugestão de recinto
+echo "<h2>Sugestão de Recinto para o " . ucfirst($animalEscolhido) . "</h2>";
+echo "<p>O recinto ideal para o " . ucfirst($animalEscolhido) . " deve ser:</p>";
+echo "<ul>";
+echo "<li><strong>Clima:</strong> " . ucfirst($preferencias['clima']) . "</li>";
+echo "<li><strong>Tamanho:</strong> " . ucfirst($preferencias['tamanho']) . "</li>";
+echo "<li><strong>Terreno:</strong> " . ucfirst($preferencias['terreno']) . "</li>";
+echo "<li><strong>Companhia:</strong> " . ucfirst($preferencias['companhia']) . "</li>";
+echo "</ul>";
